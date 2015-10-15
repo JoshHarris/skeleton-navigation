@@ -44,6 +44,7 @@ System.config({
     "core-js": "npm:core-js@1.2.1",
     "fetch": "github:github/fetch@0.9.0",
     "font-awesome": "npm:font-awesome@4.4.0",
+    "paulvanbladel/aurelia-auth": "github:paulvanbladel/aurelia-auth@0.9.19",
     "text": "github:systemjs/plugin-text@0.0.2",
     "github:aurelia/animator-css@0.17.0": {
       "aurelia-metadata": "github:aurelia/metadata@0.9.0",
@@ -99,6 +100,11 @@ System.config({
     "github:aurelia/history-browser@0.9.0": {
       "aurelia-history": "github:aurelia/history@0.8.0",
       "aurelia-pal": "github:aurelia/pal@0.2.0",
+      "core-js": "npm:core-js@0.9.18"
+    },
+    "github:aurelia/http-client@0.12.0": {
+      "aurelia-pal": "github:aurelia/pal@0.2.0",
+      "aurelia-path": "github:aurelia/path@0.10.0",
       "core-js": "npm:core-js@0.9.18"
     },
     "github:aurelia/loader-default@0.11.0": {
@@ -181,6 +187,11 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "github:paulvanbladel/aurelia-auth@0.9.19": {
+      "aurelia-framework": "github:aurelia/framework@0.17.0",
+      "aurelia-http-client": "github:aurelia/http-client@0.12.0",
+      "aurelia-router": "github:aurelia/router@0.13.0"
     },
     "github:twbs/bootstrap@3.3.5": {
       "jquery": "github:components/jquery@2.1.4"

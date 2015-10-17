@@ -1,21 +1,46 @@
 import {App} from '../../src/app';
 
 class RouterStub {
+  constructor() {
+    this.steps = [];
+  }
+
   configure(handler) {
     handler(this);
   }
+
+  addPipelineStep(step) {
+    this.steps.push(step);
+  }
+
   map(routes) {
     this.routes = routes;
   }
 }
 
+class WebAPIStub {
+
+};
+
+class HttpClientConfigStub {
+  configured = false;
+  configure() {
+    this.configured = true;
+  }
+};
+
+
 describe('the App module', () => {
   var sut
-    , mockedRouter;
+    , mockedRouter
+    , mockedClientConfig
+    , mockedWebAPI;
 
   beforeEach(() => {
     mockedRouter = new RouterStub();
-    sut = new App();
+    mockedClientConfig = new HttpClientConfigStub();
+    mockedWebAPI = new WebAPIStub();
+    sut = new App(mockedClientConfig, mockedWebAPI);
     sut.configureRouter(mockedRouter, mockedRouter);
   });
 

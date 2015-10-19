@@ -1,20 +1,19 @@
 System.config({
-  "defaultJSExtensions": true,
-  "transpiler": "babel",
-  "babelOptions": {
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "runtime"
     ]
   },
-  "paths": {
+  paths: {
     "*": "dist/*",
+    "alias/*": "dist/*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
-  }
-});
+  },
 
-System.config({
-  "map": {
+  map: {
     "aurelia-animator-css": "github:aurelia/animator-css@0.17.0",
     "aurelia-binding": "github:aurelia/binding@0.10.1",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.18.0",
@@ -41,7 +40,7 @@ System.config({
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.25",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
-    "core-js": "npm:core-js@0.9.18",
+    "core-js": "npm:core-js@1.2.2",
     "fetch": "github:github/fetch@0.9.0",
     "font-awesome": "npm:font-awesome@4.4.0",
     "text": "github:systemjs/plugin-text@0.0.2",
@@ -176,6 +175,9 @@ System.config({
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
+    "github:jspm/nodelibs-path@0.1.0": {
+      "path-browserify": "npm:path-browserify@0.0.0"
+    },
     "github:jspm/nodelibs-process@0.1.2": {
       "process": "npm:process@0.11.2"
     },
@@ -196,11 +198,20 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:core-js@1.2.2": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
     "npm:font-awesome@4.4.0": {
       "css": "github:systemjs/plugin-css@0.1.18"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:path-browserify@0.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
@@ -211,4 +222,3 @@ System.config({
     }
   }
 });
-

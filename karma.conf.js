@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '.',
 
 
     // frameworks to use
@@ -14,9 +14,10 @@ module.exports = function(config) {
 
     jspm: {
       // Edit this to your needs
-      loadFiles: ['src/**/*.js', 'test/unit/**/*.js'],
+      loadFiles: ['dist/**/*.js', 'test/unit/**/*.js'],
       paths: {
-        '*': '*.js'
+        '*': '*.js',
+        'alias/*': 'dist/*.js'
       }
     },
 
